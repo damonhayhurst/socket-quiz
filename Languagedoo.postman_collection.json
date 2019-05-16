@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Languagedoo",
+		"_postman_id": "f373e6c6-07af-fd7d-9970-423ef429f6dc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Lesson",
+			"request": {
+				"url": "http://localhost:3000/lessons",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"questions\": [\n\t\t{\n\t\t\t\"timestamp\": 20,\n\t\t\t\"type\": \"multiple-choice\",\n\t\t\t\"question\": \"This is a question?\",\n\t\t\t\"answer\": \"One\",\n\t\t\t\"choices\": [\"One\", \"Two\", \"Three\", \"Four\"]\n\t\t}\n\t],\n\t\"video\": \"5cdd420bba39af2b7f2f3112\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Lessons",
+			"request": {
+				"url": "http://localhost:3000/lessons/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lesson",
+			"request": {
+				"url": "http://localhost:3000/lessons/5cdd2b856c91d2275656b094",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Video",
+			"request": {
+				"url": "http://localhost:3000/videos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"www.vimeo.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Videos",
+			"request": {
+				"url": "http://localhost:3000/videos",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get lessons by video",
+			"request": {
+				"url": "http://localhost:3000/videos/5cdd420bba39af2b7f2f3112/lessons",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
