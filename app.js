@@ -25,10 +25,12 @@ mongoose.connect('mongodb://localhost:27017/languagedoo', { promiseLibrary: requ
   .catch((err) => console.error(err)); 
 
 const nav = [
-    {link: '/lessons', name:'Lessons'}
+    {link: '/lessons', name:'Lessons'},
+    {link: '/videos', name:'Videos'}
 ]
 
 const lessonRouter = require('./routes/lessonRoutes.js')(nav);
+const videoRouter = require('./routes/videoRoutes.js')(nav);
 
 app.use('/lessons', lessonRouter);
-
+app.use('/videos', videoRouter);

@@ -5,7 +5,7 @@ var lessonSchema = new Schema({
     questions: [questionSchema],
     video: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Lesson'
+        ref: 'Video'
     }
 })
 
