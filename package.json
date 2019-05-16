@@ -1,0 +1,19 @@
+{
+  "name": "languagedoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FilmDoo",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.8",
+    "morgan": "^1.9.1"
+  }
+}
