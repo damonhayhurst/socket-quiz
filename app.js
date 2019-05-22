@@ -26,14 +26,18 @@ mongoose.connect('mongodb://localhost:27017/languagedoo', { promiseLibrary: requ
 
 const nav = [
     {link: '/lessons', name:'Lessons'},
-    {link: '/videos', name:'Videos'}
+    {link: '/videos', name:'Videos'},
+    {link: '/teachers', name:'Teachers'}
 ]
 
 const lessonRouter = require('./routes/lessonRoutes.js')(nav);
 const videoRouter = require('./routes/videoRoutes.js')(nav);
+const teacherRouter = require('./routes/teacherRoutes.js')(nav);
+
 
 app.use('/lessons', lessonRouter);
 app.use('/videos', videoRouter);
+app.use('/teachers', teacherRouter);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

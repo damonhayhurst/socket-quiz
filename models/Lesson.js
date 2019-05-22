@@ -6,6 +6,10 @@ var lessonSchema = new Schema({
     video: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Video'
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Teacher'
     }
 })
 
