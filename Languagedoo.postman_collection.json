@@ -90,6 +90,48 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Post Teacher",
+			"request": {
+				"url": "http://localhost:3000/teachers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"damon\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Teachers",
+			"request": {
+				"url": "http://localhost:3000/teachers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher",
+			"request": {
+				"url": "http://localhost:3000/teachers/5ce54af5d8ed9f06b9858a91",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
