@@ -10,7 +10,7 @@
 		{
 			"name": "Post Lesson",
 			"request": {
-				"url": "http://localhost:3000/lessons",
+				"url": "http://localhost:3000/api/lessons",
 				"method": "POST",
 				"header": [
 					{
@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"questions\": [\n\t\t{\n\t\t\t\"timestamp\": 20,\n\t\t\t\"type\": \"multiple-choice\",\n\t\t\t\"question\": \"This is a question?\",\n\t\t\t\"answer\": \"One\",\n\t\t\t\"choices\": [\"One\", \"Two\", \"Three\", \"Four\"]\n\t\t}\n\t],\n\t\"video\": \"5cdd420bba39af2b7f2f3112\"\n}"
+					"raw": "{\n\t\"questions\": [\n\t\t{\n\t\t\t\"timestamp\": 20,\n\t\t\t\"type\": \"multiple-choice\",\n\t\t\t\"question\": \"This is a question?\",\n\t\t\t\"answer\": \"One\",\n\t\t\t\"choices\": [\"One\", \"Two\", \"Three\", \"Four\"]\n\t\t}\n\t],\n\t\"video\": \"5cdd6f338326043046f56a6a\",\n\t\"author\": \"5ce54af5d8ed9f06b9858a91\"\n}"
 				},
 				"description": ""
 			},
@@ -30,7 +30,7 @@
 		{
 			"name": "Get All Lessons",
 			"request": {
-				"url": "http://localhost:3000/lessons/",
+				"url": "http://localhost:3000/api/lessons/",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -41,7 +41,7 @@
 		{
 			"name": "Get Lesson",
 			"request": {
-				"url": "http://localhost:3000/lessons/5cdd2b856c91d2275656b094",
+				"url": "http://localhost:3000/api/lessons/5cdd6f44832604346f56a6b",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -52,7 +52,7 @@
 		{
 			"name": "Post Video",
 			"request": {
-				"url": "http://localhost:3000/videos",
+				"url": "http://localhost:3000/api/videos",
 				"method": "POST",
 				"header": [
 					{
@@ -72,7 +72,7 @@
 		{
 			"name": "Get All Videos",
 			"request": {
-				"url": "http://localhost:3000/videos",
+				"url": "http://localhost:3000/api/videos",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -83,7 +83,7 @@
 		{
 			"name": "Get lessons by video",
 			"request": {
-				"url": "http://localhost:3000/videos/5cdd420bba39af2b7f2f3112/lessons",
+				"url": "http://localhost:3000/api/videos/5cdd6f338326043046f56a6a/lessons",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -94,7 +94,7 @@
 		{
 			"name": "Post Teacher",
 			"request": {
-				"url": "http://localhost:3000/teachers",
+				"url": "http://localhost:3000/api/teachers",
 				"method": "POST",
 				"header": [
 					{
@@ -114,7 +114,7 @@
 		{
 			"name": "Get All Teachers",
 			"request": {
-				"url": "http://localhost:3000/teachers",
+				"url": "http://localhost:3000/api/teachers",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -125,10 +125,70 @@
 		{
 			"name": "Get Teacher",
 			"request": {
-				"url": "http://localhost:3000/teachers/5ce54af5d8ed9f06b9858a91",
+				"url": "http://localhost:3000/api/teachers/5ce54af5d8ed9f06b9858a91",
 				"method": "GET",
 				"header": [],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Classroom",
+			"request": {
+				"url": "http://localhost:3000/api/classrooms",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lesson\": \"5cdd6f448326043046f56a6b\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Classroom",
+			"request": {
+				"url": "http://localhost:3000/api/classrooms",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lesson\": \"5cdd6f448326043046f56a6b\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Classroom",
+			"request": {
+				"url": "http://localhost:3000/api/classrooms/5ceeb0bd67dbb9100a1d1b23",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lesson\": \"5cdd6f448326043046f56a6b\"\n}"
+				},
 				"description": ""
 			},
 			"response": []

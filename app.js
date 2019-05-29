@@ -21,17 +21,20 @@ mongoose.connect('mongodb://localhost:27017/languagedoo', { promiseLibrary: requ
 const nav = [
     {link: '/api/lessons', name:'Lessons'},
     {link: '/api/videos', name:'Videos'},
-    {link: '/api/teachers', name:'Teachers'}
+    {link: '/api/teachers', name:'Teachers'},
+    {link: '/api/classrooms', name:'Classrooms'}
 ]
 
 const lessonRouter = require('./routes/lessonRoutes.js')(nav);
 const videoRouter = require('./routes/videoRoutes.js')(nav);
 const teacherRouter = require('./routes/teacherRoutes.js')(nav);
+const classroomRouter = require('./routes/classroomRoutes.js')(nav);
 
 
 app.use('/api/lessons', lessonRouter);
 app.use('/api/videos', videoRouter);
 app.use('/api/teachers', teacherRouter);
+app.use('/api/classrooms', classroomRouter);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
