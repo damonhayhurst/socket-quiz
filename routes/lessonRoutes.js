@@ -42,7 +42,6 @@ function router(nav){
             Lesson.findById(req.params.id).populate('video').populate('author').exec(function (err, lesson) {
                 if (err) return next(err);
                 
-                res.json(lesson.video);
                 res.json(lesson);
             })
         });

@@ -33,7 +33,6 @@ function router(nav){
             Video.findById(req.params.id).populate('lessons').exec(function (err, video) {
                 if (err) return next(err);
                 res.json(video)
-                res.json(video.lessons)
             })
         })
     return videoRouter;

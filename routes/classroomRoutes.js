@@ -34,9 +34,8 @@ function router(nav){
         .get((req, res, next) => {
             Classroom.findById(req.params.id).populate('lesson').exec(function (err, classroom) {
                 if (err) return next(err);
-                
+
                 res.json(classroom);
-                res.json(classroom.lesson);
             })
         });
     return classroomRouter;
