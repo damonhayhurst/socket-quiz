@@ -1,6 +1,4 @@
-# languagedoo
-
-> Language learning using short films
+# socket-quiz
 
 ## Build Setup
 
